@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To Do List</h1>
+    </header>
+    <div class="container">
+        <h2 class="directions">Add you tasks</h2>
+        <form>
+         <input type="text"  id="task" placeholder="enter task">
+         <button >Submit</button>  
+        </form>
+        <article>
+         <h2 class="titleOfList">Items</h2>
+        <ul id="ul-items"></ul>
+       
+        </article>
+        
+        
+    
+
+     
+        
+    </div>
+
+    <script>
+    
+   
+ 
+
+
+    const listSelection=document.querySelector("#ul-items");
+    
+    let toDoList= [];
+
+    let taskItems= toDoList.map(addItem=>{
+        const li = document.createElement("li");
+        const task = document.getElementById('task').value;
+        var t=document.createTextNode(task);
+        li.appendChild(t);  
+        li.textContent= addItem;
+        
+    });
+    listSelection.append(taskItems);
+
+    const button=document.querySelector('button');
+    button.addEventListener('click', taskItems) ;
+
+   
+
+   
+    /*function addItem(){
+    
+    const li = document.createElement("li");
+    const task = document.getElementById('task').value;
+    var t=document.createTextNode(task);
+    li.appendChild(t);
+    li.textContent= task.value;
+    return li;
+    document.getElementById('ul-items').appendChild(li);
+} */
+
+
+
+    
+
+    
+    
+    
+  
+   
+
+    
+   
+   </script> 
+
+    
+    
+
+    
+    
+</body>
+</html>
